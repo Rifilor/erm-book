@@ -1,0 +1,34 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-stroke-center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-direction-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin fonts($fz: 16px, $fw: 400) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: 125%;
+}
+
+@mixin overflow-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin overflow-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

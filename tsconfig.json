@@ -1,0 +1,39 @@
+//{
+//  "files": [],
+//  "references": [
+//    {
+//      "path": "./tsconfig.node.json"
+//    },
+//    {
+//      "path": "./tsconfig.app.json"
+//    },
+//    {
+//      "path": "./tsconfig.vitest.json"
+//    }
+//  ],
+//  "compilerOptions": {
+//    "baseUrl": ".",
+//    "paths": {
+//      "@/*": ["src/*"]
+//    }
+//  }
+//}
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["@pinia/testing", "jest"],
+    "moduleResolution": "node",
+    "target": "es6",
+    "module": "esnext",
+    "jsx": "preserve",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["node_modules"]
+}

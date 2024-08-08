@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+@import "reset";
+@import 'mixins';
+@import 'colors';
+@import "animation";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  color: var(--color-dark)
+}
+
+input, select, textarea {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+
+  height: 28px;
+  outline: none;
+  padding: 5px;
+  transition: .1s linear;
+  background-color: transparent;
+  color: var(--color-dark);
+  &:focus {
+    border-color: var(--color-stale-gray);
+  }
+  &::placeholder {
+    color: var(--color-gray)
+  }
+
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.input-dark {
+  background-color: #2b3846;
+  color: var(--color-white);
+}
+
+.wrap-page {
+  padding: 75px 25px 25px 25px;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.button-main {
+  @include fonts(14px, 500);
+  @include flex-center;
+
+  cursor: pointer;
+  min-width: 100px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--color-blue);
+  color: var(--color-dark);
+  transition: .2s linear;
+  &:hover {
+    background-color: var(--color-main);
+    color: var(--color-white);
+
+  }
+  &:active {
+    transition: 0s;
+    background-color: var(--color-dark-stale-gray);
+  }
+}
+
+.button-red {
+  @include  fonts(14px, 600);
+  transition: .1s linear;
+  color: var(--color-dark-red);
+  &:hover {
+    color: var(--color-red);
+  }
+}
+
+.button-gray {
+  @include  fonts(14px, 600);
+  transition: .1s linear;
+  color: var(--color-gray);
+  &:hover {
+    color: var(--color-stale-gray);
+  }
+}
+
+.search {
+  padding-left: 40px;
+  background-image: url('https://www.svgrepo.com/show/7109/search.svg');
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
